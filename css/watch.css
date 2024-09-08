@@ -1,0 +1,241 @@
+.light {
+    --bgColorMainLate: #F5F0F0;
+    --textColorMainLate: black;
+}
+
+.dark {
+    --bgColorMainLate: rgb(71, 71, 71);
+    --textColorMainLate: white;
+}
+
+main {
+    .watch-advr-sect {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+
+        .watch-advr {
+            width: 85%;
+
+            .watch-img {
+                width: 100%;
+                overflow: hidden;
+                border-radius: 5px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+
+
+                img {
+                    width: 100%;
+                    transition: all 1.5s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .watch-body-text {
+                    position: absolute;
+                    width: 46%;
+                    color: white;
+                    height: 100%;
+                    top: 5px;
+
+                    .watch-text {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        h2 {
+                            font-size: 3.6vw;
+                        }
+
+                        p {
+                            font-size: 1.2vw;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .latest-prod-sect {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 35px 0;
+
+        .latest-prod {
+            width: 85%;
+
+            .choose-sect {
+                margin: 20px 0;
+
+                b {
+                    font-weight: 600;
+                    color:var(--textColorMain);
+                    font-size: 23px;
+                }
+            }
+
+            .fashion-sect-cards {
+                width: 100%;
+
+                .row {
+                    .col {
+                        .card {
+                            border-radius: 0;
+                            border: 1px solid rgb(230, 230, 230);
+                            position: relative;
+
+                            &:hover {
+                                .hidden-sect {
+                                    opacity: 1;
+
+                                    .hidden-sect-icons {
+                                        transform: translateY(10px);
+                                        transition: all 0.5s linear;
+                                    }
+                                }
+                            }
+
+                            .hidden-sect {
+                                position: absolute;
+                                opacity: 0;
+                                right: 10px;
+                                transition: all 0.5s ease;
+
+                                .first-new {
+                                    top: 37px;
+                                    left: 5px;
+                                    position: absolute;
+                                    background-color: rgb(98, 158, 98);
+                                    border-radius: 5px;
+
+                                    b {
+                                        color: white;
+                                        font-size: 11px;
+                                        padding: 0 10px;
+                                    }
+                                }
+
+                                .new {
+                                    position: absolute;
+                                    background-color: rgb(98, 158, 98);
+                                    top: 10px;
+                                    left: 5px;
+                                    border-radius: 5px;
+
+                                    b {
+                                        color: white;
+                                        font-size: 11px;
+                                        padding: 0 10px;
+                                    }
+                                }
+
+                                .hidden-sect-icons {
+                                    display: flex;
+                                    flex-direction: column;
+                                    top: 0;
+                                    right: 0;
+                                    position: absolute;
+                                    gap: 5px;
+
+                                    i {
+                                        color: black;
+                                        border: 1px solid rgb(196, 196, 196);
+                                        padding: 8px;
+                                        border-radius: 50%;
+                                        font-size: 1vw;
+                                        transition: all 0.4s;
+
+                                        &:hover {
+                                            background-color: #E54A4A;
+                                            color: white;
+                                            border-color: #E54A4A;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .sale {
+                                position: absolute;
+                                z-index: 2;
+                                background-color: #E54A4A;
+                                top: 10px;
+                                left: 10px;
+                                border-radius: 5px;
+
+                                b {
+                                    color: white;
+                                    font-size: 11px;
+                                    padding: 0 9px;
+                                }
+                            }
+
+                            .card-body {
+
+                                .mini-title {
+                                    font-size: 13px;
+                                    color: grey;
+                                }
+
+                                .card-title {
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                }
+
+                                .stars {
+                                    i {
+                                        color: #F2B600;
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                b {
+                                    del {
+                                        color: grey;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                    }
+
+                                    color: #E54A4A;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width:768px) {
+    main {
+        .latest-prod-sect {
+            .latest-prod {
+                .fashion-sect-cards {
+                    .row {
+                        .col {
+                            .card {
+                                .hidden-sect {
+                                    .hidden-sect-icons {
+                                        i {
+                                            font-size: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

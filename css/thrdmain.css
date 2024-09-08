@@ -1,0 +1,128 @@
+main {
+    .thrd-main-sect {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+
+        .categories {
+            width: 85%;
+
+            .categories-boxes {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .row {
+                    row-gap: 15px;
+
+                    .thrd-sect-boxes {
+                        border-radius: 7px;
+                        position: relative;
+                        width: 100%;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            transition: all 0.8s ease;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
+
+                        .thrd-body-text {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 45%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            h3 {
+                                font-size: 1.8vw;
+                            }
+
+                            b {
+                                color: #FF5252;
+                                font-size: 1.4vw;
+                            }
+
+                            a {
+                                color: black;
+                                font-weight: 500;
+
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        .thrd-main-sect {
+            .categories {
+                width: 70%;
+
+                .categories-boxes {
+                    .row {
+
+                        .thrd-sect-boxes {
+
+                            .thrd-body-text {
+
+                                h3 {
+                                    font-size: 3vw;
+                                }
+
+                                b {
+                                    color: #FF5252;
+                                    font-size: 2vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        .thrd-main-sect {
+            margin-top: 0;
+            .categories {
+                width: 85%;
+
+                .categories-boxes {
+                    .row {
+
+                        .thrd-sect-boxes {
+
+                            .thrd-body-text {
+
+                                h3 {
+                                    font-size: 3vw;
+                                }
+
+                                b {
+                                    color: #FF5252;
+                                    font-size: 2vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
